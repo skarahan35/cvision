@@ -38,7 +38,9 @@
       (drop)="onDrop($event)"
       (dragleave)="onDragLeave($event)"
     >
-      <p *ngIf="!selectedFile">📂 Drag your CV or click 'Select a PDF' button</p>
+      <p *ngIf="!selectedFile">
+        📂 Drag your CV or click 'Select a PDF' button
+      </p>
       <p *ngIf="selectedFile">📄 {{ selectedFile.name }}</p>
     </div>
     <div class="button-container">
