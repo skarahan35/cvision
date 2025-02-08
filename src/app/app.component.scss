@@ -202,24 +202,33 @@ html {
 
 @media screen and (max-width: 600px) {
   .container {
-    height: 100dvh;
+    height: 100vh;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ai-response {
+    padding: 20px 0;
   }
 
   .chat-bubble {
     width: 90%;
     max-width: 100%;
     min-height: auto;
-    font-size: 16px;
-    padding: 20px;
-    max-height: 60dvh;
+    font-size: 14px; /* Daha küçük font */
+    padding: 15px;
+    max-height: 55vh;
     overflow-y: auto;
+    margin-top: 20px; /* Üstten boşluk ekledik */
   }
 
   .chat-content {
-    font-size: 14px;
+    font-size: 13px; /* Mobil için yazı boyutu küçültüldü */
     padding: 10px;
-    max-height: 45dvh;
+    max-height: 45vh;
+    line-height: 1.4;
   }
 
   .button-container {
@@ -231,7 +240,7 @@ html {
   .file-label,
   .send-btn {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     padding: 12px;
   }
 
@@ -244,4 +253,3 @@ html {
     font-size: 20px;
   }
 }
-

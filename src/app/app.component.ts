@@ -125,7 +125,7 @@ export class AppComponent {
 
     for (const stage of stages) {
       await this.updateAnimation(stage.text, stage.color);
-      await this.delay(3000);
+      await this.delay(4000);
     }
   }
 
