@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="header">
+    <div class="header-content">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/4712/4712139.png"
+        alt="Bot Icon"
+        class="bot-icon"
+      />
+      <h1>CVision</h1>
+    </div>
+  </div>
+
+  <div class="ai-response">
+    <div
+      class="chat-bubble animated-border"
+      [ngStyle]="{ 'border-color': currentColor }"
+    >
+      <span class="chat-icon">🤖</span>
+      <div class="chat-content" #chatContainer>
+        <p
+          class="chat-text main-text animated-text"
+          [ngStyle]="{ color: currentColor }"
+        >
+          {{ displayText }}
+        </p>
+        <div
+          class="chat-text detail-text"
+          [innerHTML]="formattedResponse"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="upload-box" [class.dragging]="isDragging">
+    <div
+      class="drop-area"
+      (dragover)="onDragOver($event)"
+      (drop)="onDrop($event)"
+      (dragleave)="onDragLeave($event)"
+    >
+      <p *ngIf="!selectedFile">📂 Drag your CV or click 'Select a PDF' button</p>
+      <p *ngIf="selectedFile">📄 {{ selectedFile.name }}</p>
+    </div>
+    <div class="button-container">
+      <input
+        type="file"
+        id="fileInput"
+        (change)="onFileSelected($event)"
+        accept="application/pdf"
+        hidden
+      />
+      <label for="fileInput" class="file-label">📄 Select a PDF</label>
+      <button
+        (click)="onSendPdf()"
+        class="send-btn"
+        [disabled]="disableSendButton"
+      >
+        🚀 Send CV
+      </button>
+    </div>
+  </div>
+</div>
