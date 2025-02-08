@@ -203,6 +203,45 @@ html {
 @media screen and (max-width: 600px) {
   .container {
     height: 100dvh;
+    padding: 10px;
   }
 
+  .chat-bubble {
+    width: 90%;
+    max-width: 100%;
+    min-height: auto;
+    font-size: 16px;
+    padding: 20px;
+    max-height: 60dvh;
+    overflow-y: auto;
+  }
+
+  .chat-content {
+    font-size: 14px;
+    padding: 10px;
+    max-height: 45dvh;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .file-label,
+  .send-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .header {
+    height: 60px;
+    padding-left: 10px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
 }
+
