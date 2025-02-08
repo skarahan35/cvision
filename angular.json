@@ -17,8 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cv-analysis",
-            "baseHref": "/cvision/",
+            "outputPath": "dist/cvision",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -47,8 +46,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1MB"
                 }
               ],
               "outputHashing": "all"
