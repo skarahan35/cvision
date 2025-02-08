@@ -202,7 +202,7 @@ html {
 
 @media screen and (max-width: 600px) {
   .container {
-    height: 100vh;
+    height: 100dvh;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -217,17 +217,17 @@ html {
     width: 90%;
     max-width: 100%;
     min-height: auto;
-    font-size: 14px; /* Daha küçük font */
+    font-size: 14px;
     padding: 15px;
-    max-height: 55vh;
+    max-height: 55dvh;
     overflow-y: auto;
-    margin-top: 20px; /* Üstten boşluk ekledik */
+    margin-top: 20px;
   }
 
   .chat-content {
-    font-size: 13px; /* Mobil için yazı boyutu küçültüldü */
+    font-size: 13px;
     padding: 10px;
-    max-height: 45vh;
+    max-height: 45dvh;
     line-height: 1.4;
   }
 
